@@ -30,9 +30,10 @@ class Sudoku {
 
     int numEmptyCells;
 
-    // Asserts that (x, y) is a valid cell location.
-    inline void assertCell(int x, int y) const {
-        assert(0 <= x && x <= 8 && 0 <= y && y <= 8);
+    // Asserts that (x, y) is a valid cell location and value is a valid digit.
+    inline void assertCell(int x, int y, int value=0) const {
+        assert(0 <= x && x <= 8 && 0 <= y && y <= 8
+               && value >= 0 && value <= 9);
     }
 public:
     Sudoku();

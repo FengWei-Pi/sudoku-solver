@@ -77,7 +77,7 @@ array<int, 2> SudokuBacktrack::getNextVar(const Sudoku& board) const {
         assert(bestVar[0] != -1);
         return bestVar;
     }
-    // Else, not using heuristic
+    // Else, not using heuristic for getting next variable
     else {
         // Return any empty cell
         for (int i=0; i<9; ++i) {
